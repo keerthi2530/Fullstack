@@ -1,0 +1,284 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #111827;
+  color: #ffffff;
+
+  border-right: 1px solid #1f2937;
+
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar-logo {
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+  border-radius: 10px;
+
+  color: #ffffff;
+}
+
+.sidebar-logo h2 {
+  font-size: 17px;
+  font-weight: 700;
+
+  margin: 0;
+}
+
+.sidebar-logo span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* =========================
+   ROLE
+========================= */
+
+.sidebar-role {
+  margin: 20px 16px;
+
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #1f2937;
+
+  border: 1px solid #374151;
+  border-radius: 10px;
+
+  color: #93c5fd;
+}
+
+.sidebar-role div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-role span {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.sidebar-role strong {
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.sidebar-nav {
+  flex: 1;
+
+  padding: 0 14px;
+
+  overflow-y: auto;
+}
+
+.nav-title {
+  padding: 0 10px;
+
+  margin: 5px 0 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #6b7280;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+
+  padding: 11px 12px;
+  margin-bottom: 5px;
+
+  color: #9ca3af;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #1f2937;
+  color: #ffffff;
+
+  transform: translateX(2px);
+}
+
+.sidebar-link.active {
+  background: #2563eb;
+  color: #ffffff;
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.sidebar-link.active:hover {
+  background: #2563eb;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.sidebar-bottom {
+  padding: 16px;
+
+  border-top: 1px solid #1f2937;
+}
+
+.logout-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 11px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #7f1d1d;
+  color: #ffffff;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .dashboard-main {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sidebar-logo > div:last-child {
+    display: none;
+  }
+
+  .sidebar-role {
+    justify-content: center;
+    margin: 15px 10px;
+  }
+
+  .sidebar-role div {
+    display: none;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+
+  .nav-title {
+    display: none;
+  }
+
+  .logout-button {
+    justify-content: center;
+  }
+
+  .logout-button span {
+    display: none;
+  }
+
+  .dashboard-main {
+    margin-left: 70px;
+  }
+}
